@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD 11) # Set cpp standart
 set(CMAKE_CXX_STANDARD_REQUIRED ON) # Set cpp standart as required
 set(CMAKE_CURRENT_SOURCE_DIR)
 
+add_library(solver_lib STATIC ${CMAKE_CURRENT_SOURCE_DIR}/solver_lib/solver.cpp)
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/solver_lib
     ${CMAKE_CURRENT_SOURCE_DIR}/formatter_lib
