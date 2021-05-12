@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.4) # Min CMake version
+
+project(formatter_ex) # Name project as formatter
+
+set(CMAKE_CXX_STANDARD 11) # Set cpp standart
+set(CMAKE_CXX_STANDARD_REQUIRED ON) # Set cpp standart as required
+
+include_directories(formatter ../formatter_lib) # Include files from given directory
+add_subdirectory(../formatter_lib formatter) # Add subdir with CMakeLists.txt and code files
+
+add_library(formatter_ex STATIC formatter_ex.cpp) # Add static library from formatter.cpp
+
+target_link_libraries(formatter_ex formatter) # Specifies library to use when linking a given target
