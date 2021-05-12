@@ -1,0 +1,13 @@
+cmake_minimum_required(VERSION 3.4) # Min CMake version
+
+project(hello_world) # Name project as formatter
+
+set(CMAKE_CXX_STANDARD 11) # Set cpp standart
+set(CMAKE_CXX_STANDARD_REQUIRED ON) # Set cpp standart as required
+
+include_directories(../formatter_ex_lib) # Include files from given directory
+add_subdirectory(../formatter_ex_lib formatter_ex) # Add subdir with CMakeLists.txt and code files
+
+add_executable(hello_world hello_world.cpp) # Add executable to project
+
+target_link_libraries(hello_world formatter_ex) # Specifies library to use when linking a given target
