@@ -1,0 +1,19 @@
+# /solver_application
+cmake_minimum_required(VERSION 3.4) # Min CMake version
+
+project(solver) # Name project as formatter
+
+set(CMAKE_CXX_STANDARD 11) # Set cpp standart
+set(CMAKE_CXX_STANDARD_REQUIRED ON) # Set cpp standart as required
+
+include_directories(
+    ../formatter_ex_lib
+    ../solver_lib
+) # Include files from given directories
+
+add_subdirectory(../formatter_ex_lib formatter_ex) # Add subdir with CMakeLists.txt and code files
+add_subdirectory(../solver_lib solver_lib) # Add subdir with CMakeLists.txt and code files
+
+add_executable(solver equation.cpp) # Add executable to project
+
+target_link_libraries(solver formatter_ex solver_lib) # Specifies libraries to use when linking a given target
