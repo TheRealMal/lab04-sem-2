@@ -1,9 +1,0 @@
-# /solver_lib
-cmake_minimum_required(VERSION 3.4) # Min CMake version
-
-project(solver_lib) # Name project as formatter
-
-set(CMAKE_CXX_STANDARD 11) # Set cpp standart
-set(CMAKE_CXX_STANDARD_REQUIRED ON) # Set cpp standart as required
-
-add_library(solver_lib STATIC solver.cpp) # Add static library from solver.cpp
