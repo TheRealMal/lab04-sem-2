@@ -15,7 +15,7 @@ include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib
 ) # Include files from given directories
 
-add_executable(solver equation.cpp) # Add executable to project
+add_executable(solver ${CMAKE_CURRENT_SOURCE_DIR}/solver_application/equation.cpp) # Add executable to project
 
 find_library(formatter NAMES libformatter.a PATHS ${CMAKE_CURRENT_SOURCE_DIR}/formatter_lib/_build)
 find_library(formatter_ex NAMES libformatter_ex.a PATHS ${CMAKE_CURRENT_SOURCE_DIR}/formatter_ex_lib/_build)
